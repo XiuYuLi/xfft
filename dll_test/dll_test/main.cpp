@@ -28,7 +28,7 @@ int main()
 	cuMemAlloc(&d_a,nx*ny*sizeof(float2));
 	cuMemAlloc(&d_b,nx*ny*sizeof(float2));	
 	float2* p=new float2[nx*ny];
-	cufftComplex* q=new cufftComplex[nx*ny];
+	float2* q=new float2[nx*ny];
 	for( int y=0; y<ny; ++y )
 	{
 		for( int x=0; x<nx; ++x ){
