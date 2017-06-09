@@ -33,7 +33,7 @@
 	mISTORE8(d_o,c,8*(1<<e),)							\
 }
 #define CUDA_UFFT64X(LB,dir,n,e,bdx,op) CUDA_UFFTX_DECL(64,LB,dir,n,e)			\
-{																							\
+{                                                                                       \
 	__shared__ float smem[8*8*bdx];							\
 	float2 c[8], RF[7], temp;							\
 	unsigned int slot=blockIdx.x/((1<<e)/bdx);					\
