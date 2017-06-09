@@ -14,23 +14,23 @@
 	break;					\
 }
 
-#define mMATCH(S,R,e)	switch(e){			\
-	mCASE(S,R, 1)					\
-	mCASE(S,R, 2)					\
-	mCASE(S,R, 3)					\
-	mCASE(S,R, 4)					\
-	mCASE(S,R, 5)					\
-	mCASE(S,R, 6)					\
-	mCASE(S,R, 7)					\
-	mCASE(S,R, 8)					\
-	mCASE(S,R, 9)					\
-	mCASE(S,R,10)					\
-	mCASE(S,R,11)					\
-	mCASE(S,R,12)					\
-	mCASE(S,R,13)					\
-	mCASE(S,R,14)					\
-	mCASE(S,R,15)					\
-	mCASE(S,R,16)					\
+#define mMATCH(S,R,e)	switch(e){	\
+	mCASE(S,R, 1)			\
+	mCASE(S,R, 2)			\
+	mCASE(S,R, 3)			\
+	mCASE(S,R, 4)			\
+	mCASE(S,R, 5)			\
+	mCASE(S,R, 6)			\
+	mCASE(S,R, 7)			\
+	mCASE(S,R, 8)			\
+	mCASE(S,R, 9)			\
+	mCASE(S,R,10)			\
+	mCASE(S,R,11)			\
+	mCASE(S,R,12)			\
+	mCASE(S,R,13)			\
+	mCASE(S,R,14)			\
+	mCASE(S,R,15)			\
+	mCASE(S,R,16)			\
 }
 
 #define mMATCHUV(S,u,v,e)	switch(e){	\
