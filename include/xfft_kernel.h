@@ -19,11 +19,10 @@ typedef struct xfft_kernel{
 	unsigned int	bdy;
 	unsigned int	smemnb;
 	unsigned int	arg_size;
-	CUstream	stream;
-	void*		extra[5];
-	char		args[32];
+	void*			extra[5];
+	char			args[32];
 	unsigned int 	arg_ofs[4];
-	char		padding[48];
+	char			padding[48];
 } xfft_kernel_t;
 
 __forceinline void xfft_create_kernel( xfft_kernel_t* const p_kernel, CUmodule module, const char* p_name )
@@ -79,9 +78,9 @@ __forceinline void xfft_kernel_sep_f32( xfft_kernel_t* const p_kernel, int i, fl
 {
 	*((float*)&p_kernel->args[p_kernel->arg_ofs[i]])=p;
 }
-__forceinline void xfft_kernel_launch( xfft_kernel_t* const p )
+__forceinline void xfft_kernel_launch( xfft_kernel_t* const p, CUstream s )
 {
-	cuLaunchKernel( p->id, p->gdx, p->gdy, 1, p->bdx, p->bdy, 1, p->smemnb, p->stream, NULL, p->extra );
+	cuLaunchKernel( p->id, p->gdx, p->gdy, 1, p->bdx, p->bdy, 1, p->smemnb, s, NULL, p->extra );
 }
 
 #endif
