@@ -29,7 +29,6 @@ __forceinline void xfft_create_kernel( xfft_kernel_t* const p_kernel, CUmodule m
 {
 	cuModuleGetFunction( &p_kernel->id, module, p_name );
 	p_kernel->smemnb=0;
-	p_kernel->stream=NULL;
 	p_kernel->extra[0]=(void*)CU_LAUNCH_PARAM_BUFFER_POINTER;
 	p_kernel->extra[1]=(void*)p_kernel->args;
 	p_kernel->extra[2]=(void*)CU_LAUNCH_PARAM_BUFFER_SIZE;
